@@ -1,0 +1,10 @@
+<div class="pokemon-card" [class.caught]="caught === true">
+  <div class="card text-center" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">{{ card.name }}</h5>
+      <button type="button" class="btn btn-primary" [disabled]="caught" (click)="catchPokemon(); caught = true;">{{buttonText}}</button>
+    </div>
+  </div>
+</div>
+
+
