@@ -1,3 +1,10 @@
-<div class="pokemons-list">
+<button (click)="toggleView()">Toggle View</button>
+  <div class="pokemons-list">
+    <div *ngFor="let card of cards" class="pokemon-card">
+      <app-card *ngIf="!textView" [card]="card"></app-card>
+      <div *ngIf="textView">
+        <p>{{card.name}}</p>
+      </div>
+    </div>
+  </div>
 
-</div>

@@ -1,10 +1,17 @@
-<div class="pokemon-card" [class.caught]="caught === true">
-  <div class="card text-center" style="width: 18rem;">
-    <div class="card-body">
-      <h5 class="card-title">{{ card.name }}</h5>
-      <button type="button" class="btn btn-primary" [disabled]="caught" (click)="catchPokemon(); caught = true;">{{buttonText}}</button>
+<div [ngStyle]="{border: card.damage > 50 ? '2px solid red' : 'none'}" class="card text-center" [class.caught]="caught === true">
+  <div class="pokemon-card__content">
+    <img
+      class="pokemon-card__img"
+      src="../../assets/pokemons/{{ card.id }}.png"
+      alt="{{ card.name }}"
+      style="width: 15rem; height: auto"
+    />
+    <h5 class="card-title">{{ card.name }}</h5>
+    <h5 class="card-title">damage: {{ card.damage}}</h5>
+    <div class="pokemon-card__button">
+      <button type="button" class="btn btn-primary" (click)="catchPokemon()">
+        {{ caught ? "Отпустить" : "Поймать" }}
+      </button>
     </div>
   </div>
 </div>
-
-
