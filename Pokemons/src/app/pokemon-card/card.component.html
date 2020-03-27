@@ -1,4 +1,4 @@
-<div [ngStyle]="{border: card.damage > 50 ? '2px solid red' : 'none'}" class="card text-center" [class.caught]="caught === true">
+<div [damage-border]="card.damage" class="card text-center" [class.caught]="caught === true">
   <div class="pokemon-card__content">
     <img
       class="pokemon-card__img"
