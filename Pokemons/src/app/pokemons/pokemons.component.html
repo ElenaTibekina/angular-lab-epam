@@ -3,6 +3,7 @@
     <div *ngFor="let card of cards" class="pokemon-card">
       <app-card *ngIf="!textView" [card]="card"></app-card>
       <div *ngIf="textView">
+<!--        <app-text-pokemons-list></app-text-pokemons-list>-->
         <p>{{card.name}}</p>
       </div>
     </div>
