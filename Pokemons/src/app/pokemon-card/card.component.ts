@@ -1,10 +1,10 @@
-import { Component, Input } from '@angular/core';
-import {Card} from '../pokemons/pokemons.component';
+import { Component, Input } from "@angular/core";
+import { Card } from "../pokemons/pokemons.component";
 
 @Component({
-  selector: 'app-card',
-  templateUrl: './card.component.html',
-  styleUrls: ['./card.component.scss']
+  selector: "app-card",
+  templateUrl: "./card.component.html",
+  styleUrls: ["./card.component.scss"]
 })
 export class CardComponent {
   @Input() card: Card;
@@ -13,9 +13,9 @@ export class CardComponent {
   catchPokemon() {
     this.caught = !this.caught;
     if (this.caught) {
-      console.log('Покемон ' + this.card.name + ' был пойман');
+      console.log("Покемон " + this.card.name + " был пойман");
     } else {
-      console.log('Покемон ' + this.card.name + ' был отпущен');
+      console.log("Покемон " + this.card.name + " был отпущен");
     }
   }
 }
