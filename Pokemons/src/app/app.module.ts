@@ -7,7 +7,6 @@ import { AppComponent } from './app.component';
 import {CardComponent} from './pokemon-card/card.component';
 import { HeaderComponent } from './header/header.component';
 import { PokemonsComponent } from './pokemons/pokemons.component';
-import { TextPokemonsListComponent } from './text-pokemons-list/text-pokemons-list.component';
 
 const appRoutes: Routes = [
   { path: 'main', component: PokemonsComponent }
@@ -19,8 +18,7 @@ const appRoutes: Routes = [
     AppComponent,
     CardComponent,
     HeaderComponent,
-    PokemonsComponent,
-    TextPokemonsListComponent
+    PokemonsComponent
   ],
   imports: [
     BrowserModule,
