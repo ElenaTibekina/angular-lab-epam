@@ -4,25 +4,22 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import {CardComponent} from './pokemon-card/card.component';
-import { HeaderComponent } from './header/header.component';
-import { PokemonsComponent } from './pokemons/pokemons.component'
+import { PokemonModule } from './pokemon/pokemon.module';
+import { PokemonsListComponent } from './pokemon/pokemons-list/pokemons-list.component';
 
 const appRoutes: Routes = [
-  { path: 'main', component: PokemonsComponent }
-]
+  { path: 'main', component: PokemonsListComponent }
+];
 
 
 @NgModule({
   declarations: [
-    AppComponent,
-    CardComponent,
-    HeaderComponent,
-    PokemonsComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    PokemonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
