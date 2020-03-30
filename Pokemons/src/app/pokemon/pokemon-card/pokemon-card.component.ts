@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter, ChangeDetectionStrategy } from '@angular/core';
 import { Card } from '../pokemons-list/pokemons-list.component';
 
 @Component({
@@ -8,14 +8,11 @@ import { Card } from '../pokemons-list/pokemons-list.component';
 })
 export class PokemonCardComponent {
   @Input() card: Card;
-  caught: boolean;
+
+  // tslint:disable-next-line:no-output-on-prefix
+  @Output() onChanged = new EventEmitter<Card>();
 
   catchPokemon() {
-    this.caught = !this.caught;
-    if (this.caught) {
-      console.log('Pokemon ' + this.card.name + ' is caught');
-    } else {
-      console.log('Pokemon ' + this.card.name + ' is free');
-    }
+    this.onChanged.emit(this.card);
   }
 }

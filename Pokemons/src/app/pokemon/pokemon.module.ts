@@ -5,6 +5,7 @@ import { PokemonsListComponent } from './pokemons-list/pokemons-list.component';
 import { PokemonCardComponent } from './pokemon-card/pokemon-card.component';
 import { DamageBorderDirective } from './directives/damage-border.directive';
 import { PokemonTextComponent } from './pokemon-text/pokemon-text.component';
+import { PersonalPageComponent } from './personal-page/personal-page.component';
 
 @NgModule({
   declarations: [
@@ -13,10 +14,12 @@ import { PokemonTextComponent } from './pokemon-text/pokemon-text.component';
     PokemonCardComponent,
     DamageBorderDirective,
     PokemonTextComponent,
-    HeaderComponent],
+    HeaderComponent,
+    PersonalPageComponent],
   exports: [
     HeaderComponent,
-    PokemonsListComponent
+    PokemonsListComponent,
+    PersonalPageComponent
   ],
   imports: [
     CommonModule
