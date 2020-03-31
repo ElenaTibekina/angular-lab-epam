@@ -4,7 +4,8 @@ import { Card } from '../pokemons-list/pokemons-list.component';
 @Component({
   selector: 'app-pokemon-card',
   templateUrl: './pokemon-card.component.html',
-  styleUrls: ['./pokemon-card.component.scss']
+  styleUrls: ['./pokemon-card.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class PokemonCardComponent {
   @Input() card: Card;
