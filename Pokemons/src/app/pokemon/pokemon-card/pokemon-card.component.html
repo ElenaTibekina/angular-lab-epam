@@ -1,4 +1,4 @@
-<div [damage-border]="card.damage" class="card text-center" [class.caught]="caught === true">
+<div [damage-border]="card.damage" class="card text-center" [class.caught]="card.caught === true">
   <div class="pokemon-card__content">
     <img
       class="pokemon-card__img"
@@ -10,7 +10,7 @@
     <h5 class="card-title">damage: {{ card.damage}}</h5>
     <div class="pokemon-card__button">
       <button type="button" class="btn btn-info" (click)="catchPokemon()">
-        {{ caught ? "Let Go" : "Catch" }}
+        {{ card.caught ? "Let Go" : "Catch" }}
       </button>
     </div>
   </div>

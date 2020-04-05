@@ -1,0 +1,13 @@
+.personal-page {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+
+  &__content {
+    width: 50%;
+
+    & > p {
+      margin-bottom: 5rem;
+    }
+  }
+}

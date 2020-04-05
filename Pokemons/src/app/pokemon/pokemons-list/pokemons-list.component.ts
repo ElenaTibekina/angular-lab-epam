@@ -4,6 +4,7 @@ export interface Card {
   id: number;
   name: string;
   damage: number;
+  caught?: boolean;
 }
 
 @Component({
@@ -26,9 +27,18 @@ export class PokemonsListComponent  {
     {id: 11, name: 'metapod', damage: 74},
     {id: 12, name: 'butterfree', damage: 60}
   ];
-  textView: boolean;
+  textView = false;
 
   toggleView() {
     this.textView = !this.textView;
+  }
+
+  onChanged(card: Card) {
+      card.caught = !card.caught;
+      if (card.caught) {
+        console.log('Pokemon ' + card.name + ' is caught');
+      } else {
+        console.log('Pokemon ' + card.name + ' is free');
+      }
   }
 }
