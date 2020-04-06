@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Card } from '../pokemons-list/pokemons-list.component';
+import { Pokemon } from '../pokemon';
 
 @Component({
   selector: 'app-personal-page',

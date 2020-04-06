@@ -1,25 +1,24 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {HeaderComponent} from './header/header.component';
 import { PokemonsListComponent } from './pokemons-list/pokemons-list.component';
 import { PokemonCardComponent } from './pokemon-card/pokemon-card.component';
 import { DamageBorderDirective } from './directives/damage-border.directive';
 import { PokemonTextComponent } from './pokemon-text/pokemon-text.component';
 import { PersonalPageComponent } from './personal-page/personal-page.component';
+import { PokemonSearchComponent } from './pokemon-search/pokemon-search.component';
 
 @NgModule({
   declarations: [
-    HeaderComponent,
     PokemonsListComponent,
     PokemonCardComponent,
     DamageBorderDirective,
     PokemonTextComponent,
-    HeaderComponent,
-    PersonalPageComponent],
+    PersonalPageComponent,
+    PokemonSearchComponent],
   exports: [
-    HeaderComponent,
     PokemonsListComponent,
-    PersonalPageComponent
+    PersonalPageComponent,
+    PokemonSearchComponent
   ],
   imports: [
     CommonModule

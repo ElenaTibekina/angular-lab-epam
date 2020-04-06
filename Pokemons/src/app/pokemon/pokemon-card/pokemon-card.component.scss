@@ -1,10 +1,26 @@
 .card {
+  background-color:  rgba(mediumaquamarine, 0.8);
+  background-image:
+    linear-gradient(to bottom right, lighten(rgba(aquamarine, 0.8), 5%),
+    darken(rgba(aqua, 0.8), 45%));
   padding: .5rem 1rem;
   border: 1px solid #ccc;
   box-shadow: 8px 6px rgba(0, 0, 0, 0.2);
-  margin: .5rem;
+  margin: 1rem;
+  text-transform: capitalize;
+  font-size: 2rem;
+  color: #fff;
 
   h2 {
     margin-bottom: .5rem;
+  }
+
+  &:hover {
+    background-color: darken(rgba(mediumaquamarine, 0.8), 10%);
+    background-image:
+      linear-gradient(to bottom right, lighten(rgba(aquamarine, 0.8), 5%),
+        darken(rgba(aqua, 0.8), 65%));
+    cursor: pointer;
+    transform: scale(1.05);
   }
 }

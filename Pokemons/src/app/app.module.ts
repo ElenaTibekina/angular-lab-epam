@@ -5,6 +5,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PokemonModule } from './pokemon/pokemon.module';
+import { CoreModule } from './core/core.module';
 import { PokemonsListComponent } from './pokemon/pokemons-list/pokemons-list.component';
 
 const appRoutes: Routes = [
@@ -19,7 +20,8 @@ const appRoutes: Routes = [
   imports: [
     BrowserModule,
     AppRoutingModule,
-    PokemonModule
+    PokemonModule,
+    CoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]
