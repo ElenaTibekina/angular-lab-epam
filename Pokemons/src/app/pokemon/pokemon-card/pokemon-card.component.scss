@@ -10,6 +10,7 @@
   text-transform: capitalize;
   font-size: 2rem;
   color: #fff;
+  text-decoration: none;
 
   h2 {
     margin-bottom: .5rem;
@@ -19,8 +20,18 @@
     background-color: darken(rgba(mediumaquamarine, 0.8), 10%);
     background-image:
       linear-gradient(to bottom right, lighten(rgba(aquamarine, 0.8), 5%),
-        darken(rgba(aqua, 0.8), 65%));
+        darken(rgba(aqua, 0.8), 85%));
     cursor: pointer;
     transform: scale(1.05);
+  }
+}
+
+.pokemon-card__button {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  & > button {
+    margin-bottom: .5rem;
   }
 }

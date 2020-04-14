@@ -2,12 +2,36 @@
   display: flex;
   justify-content: center;
   text-align: center;
+  text-transform: capitalize;
+  margin-right: 2rem;
 
   &__content {
     width: 50%;
 
     & > p {
-      margin-bottom: 5rem;
+      margin-bottom: 2rem;
     }
+  }
+}
+
+@media screen and (max-width: 740px) {
+  .personal-page {
+    flex-direction: column;
+    & > img {
+      width: 50%;
+      height: auto;
+      align-self: center;
+    }
+    &__content {
+      width: 100%;
+      margin: 0 1rem;
+    }
+  }
+}
+
+.pokemon-card__button {
+  & > button {
+    width: 30%;
+    margin: 1rem;
   }
 }
