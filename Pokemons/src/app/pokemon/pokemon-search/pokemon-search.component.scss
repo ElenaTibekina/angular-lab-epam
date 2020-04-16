@@ -1,0 +1,13 @@
+.search-component {
+  display: flex;
+  margin: 1rem 3rem;
+
+  &__input {
+    width: 30%;
+  }
+
+  &__btn {
+    color: #fff;
+    margin-left: 1rem;
+  }
+}

@@ -1,44 +1,39 @@
-import {Component, Input} from '@angular/core';
-
-export interface Card {
-  id: number;
-  name: string;
-  damage: number;
-  caught?: boolean;
-}
+import {Component, OnInit } from '@angular/core';
+import { Pokemon } from '../pokemon';
+import { PokemonService } from '../pokemon.service';
 
 @Component({
   selector: 'app-pokemons-list',
   templateUrl: './pokemons-list.component.html',
   styleUrls: ['./pokemons-list.component.scss']
 })
-export class PokemonsListComponent  {
-  cards: Card[] = [
-    {id: 1, name: 'bulbasaur', damage: 23},
-    {id: 2, name: 'ivysaur', damage: 67},
-    {id: 3, name: 'venusaur', damage: 51},
-    {id: 4, name: 'charmander', damage: 14},
-    {id: 5, name: 'charmeleon', damage: 58},
-    {id: 6, name: 'charizard', damage: 37},
-    {id: 7, name: 'squirtle', damage: 78},
-    {id: 8, name: 'wartortle', damage: 128},
-    {id: 9, name: 'blastoise', damage: 8},
-    {id: 10, name: 'caterpie', damage: 46},
-    {id: 11, name: 'metapod', damage: 74},
-    {id: 12, name: 'butterfree', damage: 60}
-  ];
+export class PokemonsListComponent implements OnInit {
   textView = false;
+
+  constructor(private pokemonService:
+  PokemonService) { }
+
+  pokemons: Pokemon[];
+
+  ngOnInit() {
+    this.getAllPokemons();
+  }
 
   toggleView() {
     this.textView = !this.textView;
   }
 
-  onChanged(card: Card) {
-      card.caught = !card.caught;
-      if (card.caught) {
-        console.log('Pokemon ' + card.name + ' is caught');
+  onChanged(pokemon: Pokemon) {
+      pokemon.caught = !pokemon.caught;
+      if (pokemon.caught) {
+        console.log('Pokemon ' + pokemon.name + ' is caught');
       } else {
-        console.log('Pokemon ' + card.name + ' is free');
+        console.log('Pokemon ' + pokemon.name + ' is free');
       }
+  }
+
+  getAllPokemons(): void {
+    this.pokemonService.getAllPokemons()
+      .subscribe(pokemons => this.pokemons = pokemons);
   }
 }

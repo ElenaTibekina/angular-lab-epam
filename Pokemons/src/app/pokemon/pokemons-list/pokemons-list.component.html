@@ -1,12 +1,12 @@
-<button class="btn btn-info ml-sm-3" (click)="toggleView()">Toggle View</button>
+<button style="margin: .5rem 3rem" class="btn btn-info" (click)="toggleView()">Toggle View</button>
 <div class="pokemons-list" *ngIf="!textView">
-  <div *ngFor="let card of cards" class="pokemon-card">
-    <app-pokemon-card (onChanged)="onChanged($event)" [card]="card"></app-pokemon-card>
+  <div *ngFor="let pokemon of pokemons" class="pokemon-card">
+    <app-pokemon-card (onChanged)="onChanged($event)" [pokemon]="pokemon"></app-pokemon-card>
   </div>
 </div>
 
 <div *ngIf="textView">
-  <div *ngFor="let card of cards" class="pokemon-text">
-    <app-pokemon-text (onChanged)="onChanged($event)" [card]="card"></app-pokemon-text>
+  <div *ngFor="let pokemon of pokemons" class="pokemon-text">
+    <app-pokemon-text (onChanged)="onChanged($event)" [pokemon]="pokemon"></app-pokemon-text>
   </div>
 </div>

@@ -1,9 +1,9 @@
-<div class="pokemon-text" [class.caught]="card.caught === true">
-  <p>Name: {{card.name}}</p>
-  <p>Id: {{card.id}}</p>
-  <p>Damage: {{card.damage}}</p>
+<div class="pokemon-text" [class.caught]="pokemon.caught === true">
+  <p>Name: {{pokemon.name}}</p>
+  <p>Id: {{pokemon.id}}</p>
+  <p>Damage: {{pokemon.damage}}</p>
   <button type="button" class="btn btn-primary" (click)="catchPokemon()">
-    {{ card.caught ? "Let Go" : "Catch" }}
+    {{ pokemon.caught ? "Let Go" : "Catch" }}
 
   </button>
   <hr>

@@ -1,16 +1,16 @@
-<div [damage-border]="card.damage" class="card text-center" [class.caught]="card.caught === true">
+<div [damage-border]="pokemon.damage" class="card text-center" [class.caught]="pokemon.caught === true">
   <div class="pokemon-card__content">
     <img
       class="pokemon-card__img"
-      src="../../assets/pokemons/{{ card.id }}.png"
-      alt="{{ card.name }}"
+      src="../../assets/pokemons/{{ pokemon.id }}.png"
+      alt="{{ pokemon.name }}"
       style="width: 15rem; height: auto"
     />
-    <h5 class="card-title">{{ card.name }}</h5>
-    <h5 class="card-title">damage: {{ card.damage}}</h5>
+    <h5 class="card-title">{{ pokemon.name }}</h5>
+    <h5 class="card-title">damage: {{ pokemon.damage}}</h5>
     <div class="pokemon-card__button">
       <button type="button" class="btn btn-info" (click)="catchPokemon()">
-        {{ card.caught ? "Let Go" : "Catch" }}
+        {{ pokemon.caught ? "Let Go" : "Catch" }}
       </button>
     </div>
   </div>
