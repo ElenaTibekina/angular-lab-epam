@@ -8,6 +8,9 @@ import { PersonalPageComponent } from './personal-page/personal-page.component';
 import { PokemonSearchComponent } from './pokemon-search/pokemon-search.component';
 import {FormsModule} from '@angular/forms';
 import {RouterModule} from '@angular/router';
+import { EditingFormComponent } from './editing-form/editing-form.component';
+import { SuccessAlertComponent } from './success-alert/success-alert.component';
+
 
 @NgModule({
   declarations: [
@@ -16,7 +19,9 @@ import {RouterModule} from '@angular/router';
     DamageBorderDirective,
     PokemonTextComponent,
     PersonalPageComponent,
-    PokemonSearchComponent],
+    PokemonSearchComponent,
+    EditingFormComponent,
+    SuccessAlertComponent],
   exports: [
     PokemonsListComponent,
     PersonalPageComponent,

@@ -8,6 +8,7 @@
     <h3 class="card-title">Name: {{pokemon.name}}</h3>
     <h5>Damage: {{pokemon.damage}}</h5>
     <h5>Id: {{pokemon.id}}</h5>
+    <h5>Created: {{pokemon.createdDate | date:"EEEE, dd MMMM yyyy"}}</h5>
     <p class="card-text">
       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur
       deleniti dignissimos ea eius eum libero magnam officiis omnis quod ratione
@@ -18,9 +19,14 @@
       <button type="button" class="btn btn-info" (click)="catchPokemon()">
         {{ pokemon.caught ? "Let Go" : "Catch" }}
       </button>
-      <button type="button" class="btn btn-dark">
+      <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#createModal">
         Edit
       </button>
     </div>
   </div>
 </div>
+<app-editing-form></app-editing-form>
+<app-success-alert></app-success-alert>
+
+
+
