@@ -2,12 +2,14 @@
 <app-pokemon-search (changed)="filterPokemonsByName($event)"></app-pokemon-search>
 <div class="pokemons-list" *ngIf="!textView">
   <div *ngFor="let pokemon of pokemons" class="pokemon-card">
-    <app-pokemon-card (onChanged)="onChanged($event)" [pokemon]="pokemon"></app-pokemon-card>
+    <app-pokemon-card (onCaught)="onChanged($event)" [pokemon]="pokemon"></app-pokemon-card>
   </div>
 </div>
 
 <div *ngIf="textView">
   <div *ngFor="let pokemon of pokemons" class="pokemon-text">
-    <app-pokemon-text (onChanged)="onChanged($event)" [pokemon]="pokemon"></app-pokemon-text>
+    <app-pokemon-text (onCaught)="onChanged($event)" [pokemon]="pokemon"></app-pokemon-text>
   </div>
 </div>
+<!--<app-editing-form ></app-editing-form>-->
+<!--<app-success-alert></app-success-alert>-->

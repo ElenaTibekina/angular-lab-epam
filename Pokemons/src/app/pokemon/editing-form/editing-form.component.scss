@@ -1,0 +1,19 @@
+.editing-form {
+  &__img {
+    background-color:  rgba(mediumaquamarine, 0.8);
+    background-image:
+      linear-gradient(to bottom right, lighten(rgba(aquamarine, 0.8), 5%),
+        darken(rgba(aqua, 0.8), 45%));
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    border: .5rem solid mediumaquamarine;
+  }
+}
+
+.img-container {
+  display: flex;
+  justify-content: center;
+}
+
+

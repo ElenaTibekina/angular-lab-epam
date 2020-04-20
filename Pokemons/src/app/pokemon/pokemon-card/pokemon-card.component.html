@@ -1,6 +1,6 @@
 <div  [damage-border]="pokemon.damage" class="card text-center" [class.caught]="pokemon.caught === true">
   <div class="pokemon-card__content">
-    <img [routerLink]="['/pokemons', pokemon.id]"
+    <img [routerLink]="['/pokemon', pokemon.id]"
       class="pokemon-card__img"
       src="../../assets/pokemons/{{ pokemon.id }}.png"
       alt="{{ pokemon.name }}"
@@ -12,9 +12,11 @@
       <button type="button" class="btn btn-info" (click)="catchPokemon()">
         {{ pokemon.caught ? "Let Go" : "Catch" }}
       </button>
-      <button type="button" class="btn btn-dark">
+      <button type="button" (click)="showEditForm(pokemon.id, $event)" class="btn btn-dark" data-toggle="modal" data-target="#createModal">
         Edit
       </button>
     </div>
   </div>
 </div>
+<app-success-alert></app-success-alert>
+

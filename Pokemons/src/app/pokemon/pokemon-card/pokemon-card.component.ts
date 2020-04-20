@@ -1,5 +1,6 @@
 import { Component, Input, Output, EventEmitter, ChangeDetectionStrategy } from '@angular/core';
 import { Pokemon } from '../pokemon';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-pokemon-card',
@@ -10,9 +11,17 @@ import { Pokemon } from '../pokemon';
 export class PokemonCardComponent {
   @Input() pokemon: Pokemon;
   // tslint:disable-next-line:no-output-on-prefix
-  @Output() onChanged = new EventEmitter<Pokemon>();
+  @Output() onCaught = new EventEmitter<Pokemon>();
+
+  constructor(private router: Router) { }
 
   catchPokemon() {
-    this.onChanged.emit(this.pokemon);
+    this.onCaught.emit(this.pokemon);
+  }
+
+  showEditForm(id: number, event: Event): void {
+    event.preventDefault();
+    event.stopPropagation();
+    this.router.navigate([`pokemon/${id}/edit`]);
   }
 }

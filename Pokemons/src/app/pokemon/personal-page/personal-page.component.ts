@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Pokemon } from '../pokemon';
-import {ActivatedRoute } from '@angular/router';
+import {ActivatedRoute, Router} from '@angular/router';
 import { PokemonService } from '../pokemon.service';
 
 @Component({
@@ -13,7 +13,8 @@ export class PersonalPageComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private pokemonService: PokemonService
+    private pokemonService: PokemonService,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
@@ -28,5 +29,9 @@ export class PersonalPageComponent implements OnInit {
       console.log('Pokemon ' + this.pokemon.name + ' is caught')
       :
       console.log('Pokemon ' + this.pokemon.name + ' is free');
+  }
+
+  openEditForm(id: number) {
+    this.router.navigate([`pokemon/${id}/edit`]);
   }
 }

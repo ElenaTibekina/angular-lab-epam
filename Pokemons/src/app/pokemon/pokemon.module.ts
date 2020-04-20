@@ -10,6 +10,7 @@ import {FormsModule} from '@angular/forms';
 import {RouterModule} from '@angular/router';
 import { EditingFormComponent } from './editing-form/editing-form.component';
 import { SuccessAlertComponent } from './success-alert/success-alert.component';
+import { ModalModule } from 'ngx-bootstrap/modal';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { SuccessAlertComponent } from './success-alert/success-alert.component';
   imports: [
     CommonModule,
     FormsModule,
-    RouterModule
+    RouterModule,
+    ModalModule.forRoot()
   ]
 })
 export class PokemonModule { }
