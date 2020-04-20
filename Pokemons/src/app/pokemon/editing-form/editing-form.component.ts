@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Pokemon} from '../pokemon';
 import {PokemonService} from '../pokemon.service';
-import {ActivatedRoute } from '@angular/router';
+import {ActivatedRoute, Router} from '@angular/router';
 
 @Component({
   selector: 'app-editing-form',
@@ -13,7 +13,8 @@ export class EditingFormComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private service: PokemonService
+    private service: PokemonService,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
@@ -30,6 +31,6 @@ export class EditingFormComponent implements OnInit {
   }
 
   cancelChanges() {
-
+    this.router.navigate([`pokemon/${this.pokemon.id}`]);
   }
 }

@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { PokemonsListComponent } from './pokemon/pokemons-list/pokemons-list.component';
 import { PersonalPageComponent } from './pokemon/personal-page/personal-page.component';
 import {EditingFormComponent} from './pokemon/editing-form/editing-form.component';
+import {CancelGuard} from './pokemon/cancel.guard';
 
 
 const routes: Routes = [
@@ -10,7 +11,7 @@ const routes: Routes = [
   { path: 'pokemons_list', component: PokemonsListComponent },
   { path: 'pokemons_list/:pokemonId/edit', component: PokemonsListComponent},
   { path: 'pokemon/:pokemonId', component: PersonalPageComponent },
-  { path: 'pokemon/:pokemonId/edit', component: EditingFormComponent },
+  { path: 'pokemon/:pokemonId/edit', component: EditingFormComponent, canDeactivate: [CancelGuard] },
   { path: '**', redirectTo: '/'}
 ];
 

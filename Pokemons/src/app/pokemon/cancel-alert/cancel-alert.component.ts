@@ -2,6 +2,7 @@ import {Component, Input, OnInit} from '@angular/core';
 import {Pokemon} from '../pokemon';
 import {ActivatedRoute, Router} from '@angular/router';
 import {PokemonService} from '../pokemon.service';
+import { Subject } from 'rxjs';
 
 @Component({
   selector: 'app-cancel-alert',
