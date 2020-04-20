@@ -4,13 +4,14 @@
     linear-gradient(to bottom right, lighten(rgba(aquamarine, 0.8), 5%),
     darken(rgba(aqua, 0.8), 45%));
   padding: .5rem 1rem;
-  border: 1px solid #ccc;
   box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.7), 0 10px 20px 0 rgba(0, 0, 0, 0.19);
   margin: 1rem;
   text-transform: capitalize;
   font-size: 2rem;
   color: #fff;
   text-decoration: none;
+  border-radius: 1rem;
+  border: none;
 
   h2 {
     margin-bottom: .5rem;

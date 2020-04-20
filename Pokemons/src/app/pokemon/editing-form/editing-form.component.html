@@ -4,9 +4,9 @@
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLongTitle">Editing Form</h5>
       </div>
-      <div class="modal-body">
+      <div class="modal-body editing-form-body">
         <div>
-          <div class="form-group img-container">
+          <div class="form-group editing-form__img-container">
             <img
               class="editing-form__img"
               src="../../assets/pokemons/{{pokemon.id}}.png"
@@ -41,7 +41,8 @@
         <button
           type="button"
           class="btn btn-secondary"
-          data-dismiss="modal">Cancel
+          data-toggle="modal"
+          data-target="#cancelChanges">Cancel
         </button>
         <button
           type="button"
@@ -50,6 +51,7 @@
           data-toggle="modal"
           data-target="#saveChanges">Save changes</button>
         <app-success-alert></app-success-alert>
+        <app-cancel-alert></app-cancel-alert>
       </div>
     </div>
   </form>

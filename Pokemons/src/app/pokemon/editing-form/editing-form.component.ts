@@ -28,4 +28,8 @@ export class EditingFormComponent implements OnInit {
   saveChanges() {
     this.service.updatePokemon(this.pokemon);
   }
+
+  cancelChanges() {
+
+  }
 }

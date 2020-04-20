@@ -11,6 +11,7 @@ import {RouterModule} from '@angular/router';
 import { EditingFormComponent } from './editing-form/editing-form.component';
 import { SuccessAlertComponent } from './success-alert/success-alert.component';
 import { ModalModule } from 'ngx-bootstrap/modal';
+import { CancelAlertComponent } from './cancel-alert/cancel-alert.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { ModalModule } from 'ngx-bootstrap/modal';
     PersonalPageComponent,
     PokemonSearchComponent,
     EditingFormComponent,
-    SuccessAlertComponent],
+    SuccessAlertComponent,
+    CancelAlertComponent],
   exports: [
     PokemonsListComponent,
     PersonalPageComponent,
