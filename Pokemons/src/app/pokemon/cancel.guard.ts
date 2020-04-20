@@ -20,6 +20,8 @@ export class CancelGuard implements CanDeactivate<EditingFormComponent> {
     nextState?: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
     if (JSON.stringify(component.pokemon) === JSON.stringify(this.pokemonService.getPokemonById(component.pokemon.id))) {
       return true;
+    } else {
+      return confirm('Are you sure, you want to leave this page? Your changes won\'t be saved');
     }
   }
 }

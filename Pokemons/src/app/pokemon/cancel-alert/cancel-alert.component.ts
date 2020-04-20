@@ -2,7 +2,7 @@ import {Component, Input, OnInit} from '@angular/core';
 import {Pokemon} from '../pokemon';
 import {ActivatedRoute, Router} from '@angular/router';
 import {PokemonService} from '../pokemon.service';
-import { Subject } from 'rxjs';
+import {Observable} from 'rxjs';
 
 @Component({
   selector: 'app-cancel-alert',
@@ -13,6 +13,11 @@ export class CancelAlertComponent implements OnInit {
 
   pokemon: Pokemon;
   @Input() showMePartially: true;
+
+  saved = false;
+  save() {
+    this.saved = true;
+  }
 
   constructor(
     private route: ActivatedRoute,
@@ -26,8 +31,10 @@ export class CancelAlertComponent implements OnInit {
     });
   }
 
-  confirm(id: number) {
-    this.router.navigate([`pokemon/${id}`]);
-  }
+
+
+  // confirm(id: number) {
+  //   this.router.navigate([`pokemon/${id}`]);
+  // }
 
 }
