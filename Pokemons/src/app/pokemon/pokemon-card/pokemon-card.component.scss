@@ -30,12 +30,14 @@
   }
 }
 
-.pokemon-card__button {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
+.pokemon-card {
+  &__button {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 
-  & > button {
-    margin-bottom: .5rem;
+    & > button {
+      margin-bottom: .5rem;
+    }
   }
 }

@@ -1,11 +1,13 @@
 <div  [damage-border]="pokemon.damage" class="card text-center" [class.caught]="pokemon.caught === true">
   <div class="pokemon-card__content">
-    <img [routerLink]="['/pokemon', pokemon.id]"
-      class="pokemon-card__img"
-      src="../../assets/pokemons/{{ pokemon.id }}.png"
-      alt="{{ pokemon.name }}"
-      style="width: 15rem; height: auto"
-    />
+    <a [routerLink]="['/pokemon', pokemon.id]">
+      <img
+        class="pokemon-card__img"
+        src="../../assets/pokemons/{{ pokemon.id }}.png"
+        alt="{{ pokemon.name }}"
+        style="width: 15rem; height: auto"
+      />
+    </a>
     <h5 class="card-title">{{ pokemon.name }}</h5>
     <h5 class="card-title">damage: {{ pokemon.damage}}</h5>
     <div class="pokemon-card__button">
