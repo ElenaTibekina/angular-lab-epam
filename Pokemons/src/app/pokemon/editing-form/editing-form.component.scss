@@ -1,0 +1,25 @@
+.editing-form {
+  border: none;
+  border-radius: 1rem;
+
+   & > input {
+     border-radius: 1rem;
+   }
+  &__img-container {
+    display: flex;
+    justify-content: center;
+  }
+  &__img {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+  }
+}
+
+.form-group > input {
+  border-radius: 1rem;
+  height: 3rem;
+}
+
+
+

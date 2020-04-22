@@ -10,9 +10,7 @@ import { PokemonService } from '../pokemon.service';
 export class PokemonsListComponent implements OnInit {
   textView = false;
 
-  constructor(private pokemonService:
-  PokemonService) { }
-
+  constructor(private pokemonService: PokemonService) { }
   pokemons: Pokemon[];
 
   ngOnInit() {
@@ -23,17 +21,19 @@ export class PokemonsListComponent implements OnInit {
     this.textView = !this.textView;
   }
 
+  filterPokemonsByName(name: string): void {
+    this.pokemons = this.pokemonService.filterPokemonsByName(name);
+  }
+
   onChanged(pokemon: Pokemon) {
       pokemon.caught = !pokemon.caught;
-      if (pokemon.caught) {
-        console.log('Pokemon ' + pokemon.name + ' is caught');
-      } else {
-        console.log('Pokemon ' + pokemon.name + ' is free');
-      }
+      pokemon.caught ?
+      console.log('Pokemon ' + pokemon.name + ' is caught')
+      :
+      console.log('Pokemon ' + pokemon.name + ' is free');
   }
 
   getAllPokemons(): void {
-    this.pokemonService.getAllPokemons()
-      .subscribe(pokemons => this.pokemons = pokemons);
+    this.pokemons = this.pokemonService.getAllPokemons();
   }
 }

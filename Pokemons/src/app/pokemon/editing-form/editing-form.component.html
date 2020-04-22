@@ -1,0 +1,59 @@
+<div class="editing-form__page">
+  <form #pokemonForm="ngForm" class="modal-dialog">
+    <div class="modal-content editing-form">
+      <div class="modal-header">
+        <h5 class="modal-title mx-auto" id="exampleModalLongTitle">Editing Form</h5>
+      </div>
+      <div class="modal-body editing-form-body">
+        <div>
+          <div class="form-group editing-form__img-container">
+            <img
+              class="editing-form__img"
+              src="../../assets/pokemons/{{pokemon.id}}.png"
+              alt="Pokemon Name"
+            />
+          </div>
+          <div class="form-group">
+            <label for="pokemonName">Name</label>
+            <input type="text" class="form-control"
+                   [(ngModel)]="pokemon.name"
+                   id="pokemonName" name="name"
+                   placeholder="Enter pokemon's name"
+            >
+          </div>
+          <div class="form-group">
+            <label for="pokemonDamage">Damage</label>
+            <input type="number" class="form-control"
+                   [(ngModel)]="pokemon.damage" id="pokemonDamage"
+                   name="damage"
+                   placeholder="Enter the number of damage">
+          </div>
+          <div class="form-group">
+            <label for="pokemonCreatedDate">Creation Date</label>
+            <input type="date" class="form-control"
+                   [(ngModel)]="pokemon.createdDate"
+                   name="createdDate" id="pokemonCreatedDate"
+                   placeholder="Enter the date of creation">
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button
+          (click)="cancelChanges()"
+          type="button"
+          class="btn btn-secondary"
+          data-toggle="modal"
+          data-target="#cancelChanges">Cancel
+        </button>
+        <button
+          type="button"
+          class="btn btn-success"
+          (click)=saveChanges()
+          data-toggle="modal"
+          data-target="#saveChanges">Save changes</button>
+        <app-success-alert></app-success-alert>
+<!--        <app-cancel-alert></app-cancel-alert>-->
+      </div>
+    </div>
+  </form>
+</div>
