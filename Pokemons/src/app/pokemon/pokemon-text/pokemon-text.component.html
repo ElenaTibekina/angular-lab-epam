@@ -1,10 +1,14 @@
 <div class="pokemon-text" [class.caught]="pokemon.caught === true">
-  <p>Name: {{pokemon.name}}</p>
+  <p>Name: <a [routerLink]="['/pokemons', pokemon.id]">{{pokemon.name}}</a></p>
   <p>Id: {{pokemon.id}}</p>
   <p>Damage: {{pokemon.damage}}</p>
-  <button type="button" class="btn btn-primary" (click)="catchPokemon()">
-    {{ pokemon.caught ? "Let Go" : "Catch" }}
-
-  </button>
+  <div class="pokemon-card__button">
+    <button type="button" class="btn btn-info" (click)="catchPokemon()">
+      {{ pokemon.caught ? "Let Go" : "Catch" }}
+    </button>
+    <button type="button" class="btn btn-dark">
+      Edit
+    </button>
+  </div>
   <hr>
 </div>

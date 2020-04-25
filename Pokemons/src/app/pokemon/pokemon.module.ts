@@ -6,6 +6,8 @@ import { DamageBorderDirective } from './directives/damage-border.directive';
 import { PokemonTextComponent } from './pokemon-text/pokemon-text.component';
 import { PersonalPageComponent } from './personal-page/personal-page.component';
 import { PokemonSearchComponent } from './pokemon-search/pokemon-search.component';
+import {FormsModule} from '@angular/forms';
+import {RouterModule} from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { PokemonSearchComponent } from './pokemon-search/pokemon-search.componen
     PokemonSearchComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule,
+    RouterModule
   ]
 })
 export class PokemonModule { }

@@ -1,6 +1,6 @@
-<div [damage-border]="pokemon.damage" class="card text-center" [class.caught]="pokemon.caught === true">
+<div  [damage-border]="pokemon.damage" class="card text-center" [class.caught]="pokemon.caught === true">
   <div class="pokemon-card__content">
-    <img
+    <img [routerLink]="['/pokemons', pokemon.id]"
       class="pokemon-card__img"
       src="../../assets/pokemons/{{ pokemon.id }}.png"
       alt="{{ pokemon.name }}"
@@ -11,6 +11,9 @@
     <div class="pokemon-card__button">
       <button type="button" class="btn btn-info" (click)="catchPokemon()">
         {{ pokemon.caught ? "Let Go" : "Catch" }}
+      </button>
+      <button type="button" class="btn btn-dark">
+        Edit
       </button>
     </div>
   </div>
